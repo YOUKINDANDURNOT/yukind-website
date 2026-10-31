@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New password · YUKIND</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4C6D3">
+<link rel="icon" href="img/icon.png">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Archivo";src:url("fonts/archivo.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+:root{--pink:#F4C6D3;--blush:#FBE7EC;--rose:#E2507F;--wine:#4A0E22;--white:#FFFBFC;--line:rgba(74,14,34,.18);--f:"Archivo","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--pink);color:var(--wine);font:300 16px/1.7 var(--f);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+.caps{font-weight:500;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:.16em;font-size:11.5px}
+header{padding:24px max(20px,5vw);text-align:center}
+.logo{font-weight:500;font-variation-settings:"wdth" 125;letter-spacing:.42em;font-size:19px;text-decoration:none}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px 16px 80px}
+.card{background:var(--white);width:100%;max-width:440px;padding:48px 36px;border:1px solid var(--line)}
+h1{font-weight:400;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:.08em;font-size:26px;line-height:1.2;margin:0 0 12px}
+p{margin:0 0 28px}
+label{display:block;margin-bottom:8px}
+.field{position:relative}
+input{width:100%;font:400 16px var(--f);color:var(--wine);background:transparent;border:0;border-bottom:1px solid var(--wine);padding:12px 64px 12px 0;border-radius:0}
+input:focus{outline:none;border-bottom-color:var(--rose)}
+.show{position:absolute;right:0;top:8px;background:none;border:0;color:var(--wine);cursor:pointer;padding:6px 0}
+button.go{margin-top:32px;width:100%;background:var(--wine);color:var(--pink);border:0;padding:18px;cursor:pointer}
+button.go:disabled{opacity:.5;cursor:default}
+.err{margin-top:20px;color:#B3261E;font-size:14px;min-height:1em}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><a class="logo" href="/">YUKIND</a></header>
+<main>
+  <div class="card">
+    <div id="form-view">
+      <h1>New password</h1>
+      <p>Choose a new password for your YUKIND account.</p>
+      <form id="form">
+        <label class="caps" for="pw">New password</label>
+        <div class="field">
+          <input id="pw" type="password" autocomplete="new-password" minlength="8" required>
+          <button type="button" class="show caps" id="show">Show</button>
+        </div>
+        <button class="go caps" id="go" type="submit">Save password</button>
+        <div class="err" id="err" role="alert"></div>
+      </form>
+    </div>
+    <div id="done-view" hidden>
+      <h1>All set</h1>
+      <p>Your password is changed. Go back to the YUKIND app and log in with your new password.</p>
+    </div>
+    <div id="bad-view" hidden>
+      <h1>Link expired</h1>
+      <p id="bad-text">This link has expired or was already used. In the YUKIND app, tap “Forgot password?” to get a new one.</p>
+    </div>
+  </div>
+</main>
+<script>
+(function () {
+  var URL_ = 'https://rbuiafqvlfgmhdrhudhy.supabase.co';
+  var KEY = 'sb_publishable_RpSMFQiXCIgI8nuxFgP2_A_EUZNFQmZ';
+  var hash = new URLSearchParams(location.hash.replace(/^#/, ''));
+  var query = new URLSearchParams(location.search);
+  var token = hash.get('access_token');
+  history.replaceState(null, '', location.pathname);
+  function show(id) {
+    ['form-view', 'done-view', 'bad-view'].forEach(function (v) {
+      document.getElementById(v).hidden = v !== id;
+    });
+  }
+  if (!token) {
+    show('bad-view');
+    return;
+  }
+  var pw = document.getElementById('pw');
+  document.getElementById('show').onclick = function () {
+    var hidden = pw.type === 'password';
+    pw.type = hidden ? 'text' : 'password';
+    this.textContent = hidden ? 'Hide' : 'Show';
+  };
+  document.getElementById('form').onsubmit = function (e) {
+    e.preventDefault();
+    var err = document.getElementById('err');
+    var go = document.getElementById('go');
+    err.textContent = '';
+    if (pw.value.length < 8) { err.textContent = 'Your password needs at least 8 characters.'; return; }
+    go.disabled = true; go.textContent = 'One moment…';
+    fetch(URL_ + '/auth/v1/user', {
+      method: 'PUT',
+      headers: { 'apikey': KEY, 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pw.value })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok, status: r.status, body: b }; });
+    }).then(function (res) {
+      if (res.ok) { show('done-view'); return; }
+      var m = (res.body && (res.body.msg || res.body.message || res.body.error_description)) || '';
+      if (res.status === 401 || res.status === 403) { show('bad-view'); return; }
+      err.textContent = /same/i.test(m) ? 'Please choose a password you haven’t used before.'
+        : /weak|short|characters/i.test(m) ? 'Please choose a stronger password.'
+        : 'Something went wrong. Please try again.';
+      go.disabled = false; go.textContent = 'Save password';
+    }).catch(function () {
+      err.textContent = 'No connection. Please try again.';
+      go.disabled = false; go.textContent = 'Save password';
+    });
+  };
+})();
+</script>
+</body>
+</html>

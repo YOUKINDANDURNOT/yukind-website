@@ -19,7 +19,7 @@
 :root{
   --pink:#F4C6D3;      /* YUKIND pink, the house colour */
   --blush:#FBE7EC;     /* palest pink, for calm grounds */
-  --rose:#E2507F;      /* bright rose, the spark */
+  --rose:#D9738C;      /* bright rose, the spark */
   --wine:#4A0E22;      /* burgundy ink */
   --white:#FFFBFC;
   --line:rgba(74,14,34,.22);
@@ -158,11 +158,11 @@ header.solid{background:var(--white);color:var(--wine);border-bottom:1px solid v
 @media (max-width:860px){.book{grid-template-columns:1fr}.book .ph{min-height:0;aspect-ratio:1/1}.book .txt{padding-top:80px;padding-bottom:80px}}
 
 /* sitters on bright rose */
-.sit{background:var(--rose);color:var(--white);text-align:center;padding-top:140px;padding-bottom:140px}
+.sit{background:var(--pink);color:var(--wine);text-align:center;padding-top:140px;padding-bottom:140px}
 .sit .big{font-weight:300;font-variation-settings:"wdth" 125;font-size:clamp(90px,17vw,260px);line-height:.9;letter-spacing:-.01em;margin:46px 0 16px}
 .sit .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1000px;margin:80px auto 64px;text-align:center}
 .sit .perks p{font-size:14px;max-width:26ch;margin:10px auto 0}
-.sit .link:hover{color:var(--wine)}
+.sit .link:hover{color:var(--rose)}
 @media (max-width:760px){.sit .perks{grid-template-columns:1fr}.sit{padding-top:96px;padding-bottom:96px}}
 
 /* questions */
@@ -256,15 +256,15 @@ footer .fine{color:rgba(244,198,211,.7)}
       <article>
         <div class="ph route" id="route">
           <svg viewBox="0 0 400 500" role="img" aria-label="A walk route drawn in pink on a map">
-            <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#E2507F" stroke-opacity=".09"/></pattern></defs>
+            <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#D9738C" stroke-opacity=".09"/></pattern></defs>
             <rect width="400" height="500" fill="#FBEFF2"/><rect width="400" height="500" fill="url(#grid)"/>
             <path d="M-10 140 C 120 120, 260 170, 410 130" fill="none" stroke="#fff" stroke-width="16"/>
             <path d="M120 -10 C 140 160, 90 330, 150 510" fill="none" stroke="#fff" stroke-width="12"/>
             <ellipse cx="275" cy="320" rx="95" ry="70" fill="#E9F0E2"/>
-            <path class="trail" d="M88 402 C 100 340, 128 300, 150 262 S 176 190, 232 186 S 330 214, 346 270 S 330 372, 268 392 S 186 380, 168 330 S 196 276, 236 288" fill="none" stroke="#E2507F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="trail" d="M88 402 C 100 340, 128 300, 150 262 S 176 190, 232 186 S 330 214, 346 270 S 330 372, 268 392 S 186 380, 168 330 S 196 276, 236 288" fill="none" stroke="#D9738C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="88" cy="402" r="8" fill="#fff" stroke="#4A0E22" stroke-width="4"/>
-            <circle class="ping" cx="236" cy="288" r="10" fill="#E2507F"/>
-            <circle cx="236" cy="288" r="10" fill="#E2507F" stroke="#fff" stroke-width="4"/>
+            <circle class="ping" cx="236" cy="288" r="10" fill="#D9738C"/>
+            <circle cx="236" cy="288" r="10" fill="#D9738C" stroke="#fff" stroke-width="4"/>
           </svg>
           <span class="chip caps"><i></i>Live · 0.78 mi · 32 min</span>
         </div>
@@ -410,7 +410,7 @@ if (!still) setInterval(() => {
 const route = document.getElementById('route');
 if (route) {
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { route.classList.add('in'); o.disconnect(); } }), { threshold: .4 }).observe(route);
+    new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { route.classList.add('in'); o.disconnect(); } }), { threshold: .2 }).observe(route);
   } else route.classList.add('in');
 }
 

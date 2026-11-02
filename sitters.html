@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sit with YUKIND · Keep 100% of your price</title>
+<meta name="description" content="Become a YUKIND dog sitter in London. Set your own price and keep all of it. Walks, day sitting, overnights and special care.">
+<meta property="og:title" content="Sit with YUKIND · Keep 100%">
+<meta property="og:description" content="Set your own price and keep all of it. Apply to sit with YUKIND in London.">
+<meta property="og:image" content="https://yukind.uk/img/sitters.jpg">
+<meta name="theme-color" content="#E2507F">
+<link rel="canonical" href="https://yukind.uk/sitters.html">
+<link rel="icon" href="img/icon.png">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Archivo";src:url("fonts/archivo.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+:root{--pink:#F4C6D3;--blush:#FBE7EC;--rose:#E2507F;--wine:#4A0E22;--white:#FFFBFC;--line:rgba(74,14,34,.22);--f:"Archivo","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--white);color:var(--wine);font:300 15px/1.7 var(--f);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+p{margin:0}
+.pad{padding-left:max(20px,5vw);padding-right:max(20px,5vw)}
+.caps{font-weight:500;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;line-height:1.5}
+.display{font-weight:400;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:.08em;line-height:1.15;margin:0;text-wrap:balance}
+.d1{font-size:clamp(30px,5vw,72px)}
+.d2{font-size:clamp(22px,2.9vw,40px)}
+.d3{font-size:clamp(15px,1.3vw,18px);letter-spacing:.14em}
+.link{display:inline-block;text-decoration:none;padding-bottom:6px;border-bottom:1px solid currentColor;transition:color .3s}
+.link:hover{color:var(--rose)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--wine);color:var(--pink);border:1px solid var(--wine);height:54px;padding:0 40px;cursor:pointer;font:500 11.5px/1 var(--f);font-variation-settings:"wdth" 125;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background .3s,color .3s}
+.btn:hover{background:transparent;color:var(--wine)}
+
+header{position:sticky;top:0;z-index:20;background:var(--white);border-bottom:1px solid var(--line)}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:68px}
+.bar nav{display:flex;gap:28px}
+.bar a{text-decoration:none}
+.bar nav a:hover,.bar .right a:hover{color:var(--rose)}
+.logo{font-weight:500;font-variation-settings:"wdth" 125;letter-spacing:.42em;font-size:19px;padding-left:.42em}
+.bar .right{justify-self:end}
+@media (max-width:760px){.bar nav{display:none}.bar{grid-template-columns:auto 1fr}.logo{padding-left:0}}
+
+/* opening: rose room beside a photograph */
+.open{display:grid;grid-template-columns:1.05fr 1fr;background:var(--rose);color:var(--white);min-height:calc(100vh - 68px)}
+.open .txt{display:flex;flex-direction:column;justify-content:center;padding-top:90px;padding-bottom:90px;gap:26px}
+.open .big{font-weight:300;font-variation-settings:"wdth" 125;font-size:clamp(96px,14vw,220px);line-height:.85;letter-spacing:-.01em}
+.open .ph{overflow:hidden;min-height:520px}
+.open .ph img{width:100%;height:100%;object-fit:cover}
+.open .btn{background:var(--white);color:var(--wine);border-color:var(--white);align-self:flex-start}
+.open .btn:hover{background:transparent;color:var(--white)}
+.open p.lead{max-width:40ch;font-size:16px}
+@media (max-width:860px){.open{grid-template-columns:1fr}.open .ph{min-height:0;aspect-ratio:4/5;order:-1}}
+
+/* calculator */
+.calc{background:var(--pink);text-align:center;padding-top:130px;padding-bottom:130px}
+.calc .box{max-width:760px;margin:60px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:40px;text-align:left}
+.calc label{display:block;margin-bottom:12px}
+.calc output{display:block;font-variation-settings:"wdth" 125;font-size:28px;margin-bottom:8px}
+.calc input[type=range]{width:100%;accent-color:var(--wine)}
+.result{max-width:760px;margin:56px auto 0;border-top:1px solid var(--line);padding-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.result .n{font-weight:300;font-variation-settings:"wdth" 125;font-size:clamp(44px,6vw,80px);line-height:1}
+.result .other .n{color:rgba(74,14,34,.45);text-decoration:line-through;text-decoration-thickness:2px}
+.calc .fine{margin-top:28px;font-size:12.5px}
+@media (max-width:640px){.calc .box,.result{grid-template-columns:1fr}.calc{padding-top:96px;padding-bottom:96px}}
+
+/* perks */
+.perks{padding-top:140px;padding-bottom:140px;text-align:center}
+.perks ol{list-style:none;margin:72px auto 0;padding:0;max-width:1140px;display:grid;grid-template-columns:repeat(4,1fr);gap:36px;text-align:left;counter-reset:n}
+.perks li{counter-increment:n;border-top:1px solid var(--line);padding-top:24px}
+.perks li::before{content:"0" counter(n);display:block;font-variation-settings:"wdth" 125;font-size:11.5px;letter-spacing:.16em;color:var(--rose);margin-bottom:16px}
+.perks h3{margin:0 0 10px}
+.perks p{font-size:14px}
+@media (max-width:960px){.perks ol{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.perks ol{grid-template-columns:1fr}.perks{padding-top:96px;padding-bottom:96px}}
+
+/* what you'll need + how it works */
+.steps{display:grid;grid-template-columns:1fr 1fr;background:var(--wine);color:var(--pink)}
+.steps > div{padding-top:120px;padding-bottom:120px}
+.steps .display{color:var(--white)}
+.steps ul,.steps ol{list-style:none;margin:48px 0 0;padding:0;max-width:440px}
+.steps li{padding:20px 0;border-top:1px solid rgba(244,198,211,.3)}
+.steps li h3{color:var(--white);margin:0 0 6px}
+.steps li p{font-size:14px;color:rgba(244,198,211,.85)}
+.steps ol{counter-reset:s}
+.steps ol li{counter-increment:s;display:grid;grid-template-columns:44px 1fr}
+.steps ol li::before{content:counter(s);font-variation-settings:"wdth" 125;font-size:20px;color:var(--rose);line-height:1.3}
+.steps > div + div{border-left:1px solid rgba(244,198,211,.2)}
+@media (max-width:860px){.steps{grid-template-columns:1fr}.steps > div{padding-top:80px;padding-bottom:80px}.steps > div + div{border-left:0;border-top:1px solid rgba(244,198,211,.2)}}
+
+/* questions */
+.faq{padding-top:130px;padding-bottom:110px;max-width:900px;margin:0 auto}
+.faq .display{text-align:center;margin-bottom:60px}
+details{border-top:1px solid var(--line);padding:24px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:24px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:18px;line-height:1;color:var(--rose);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:14px;max-width:60ch}
+
+/* apply */
+.join{background:var(--pink);text-align:center;padding-top:130px;padding-bottom:130px}
+.join form{max-width:520px;margin:52px auto 0;display:grid;gap:30px;text-align:left}
+.field label{display:block;margin-bottom:6px}
+.field input,.field select{width:100%;height:44px;border:0;border-bottom:1px solid var(--wine);background:transparent;color:var(--wine);font:300 17px var(--f);padding:0;border-radius:0;-webkit-appearance:none;appearance:none}
+.field input:focus,.field select:focus{outline:none;border-bottom:2px solid var(--wine)}
+.join .btn{justify-self:center}
+.form-msg{min-height:22px;text-align:center;font-size:14px}
+.form-msg.ok{font-weight:500}.form-msg.err{color:#9B1C1C}
+.fine{text-align:center;font-size:12.5px}
+
+footer{background:var(--wine);color:var(--pink);padding-top:80px;padding-bottom:48px;text-align:center}
+footer .logo{display:inline-block;color:var(--white);font-size:24px;text-decoration:none}
+footer nav{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin:40px 0 56px}
+footer nav a{text-decoration:none}
+footer nav a:hover{color:var(--white)}
+footer .fine{color:rgba(244,198,211,.7)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar pad">
+    <nav class="caps" aria-label="Main">
+      <a href="/">For owners</a><a href="#earn">Earnings</a><a href="#how">How it works</a>
+    </nav>
+    <a class="logo" href="/" aria-label="YUKIND home">YUKIND</a>
+    <div class="right caps"><a href="#apply">Apply</a></div>
+  </div>
+</header>
+
+<main>
+  <section class="open">
+    <div class="txt pad">
+      <p class="caps">Sit with YUKIND · London</p>
+      <p class="big" aria-label="100 percent">100%</p>
+      <h1 class="display d2">of your price is yours</h1>
+      <p class="lead">Walks, day sitting, overnights and special care for London's dogs. You set the price, you choose the requests, and you keep every penny. Owners pay our booking fee.</p>
+      <a class="btn" href="#apply">Apply to sit</a>
+    </div>
+    <div class="ph"><img src="img/sitters.jpg" alt="Two small white dogs sitting together in autumn leaves"></div>
+  </section>
+
+  <section class="calc pad" id="earn" aria-labelledby="calc-h">
+    <h2 class="display d2" id="calc-h">What you'd earn</h2>
+    <div class="box">
+      <div>
+        <label class="caps" for="price">Your price per walk</label>
+        <output id="price-out" for="price">£18</output>
+        <input type="range" id="price" min="10" max="40" step="1" value="18">
+      </div>
+      <div>
+        <label class="caps" for="walks">Walks a week</label>
+        <output id="walks-out" for="walks">10</output>
+        <input type="range" id="walks" min="1" max="40" step="1" value="10">
+      </div>
+    </div>
+    <div class="result" aria-live="polite">
+      <div>
+        <p class="caps">With YUKIND, a month</p>
+        <p class="n" id="ours">£780</p>
+      </div>
+      <div class="other">
+        <p class="caps">On apps that keep 20%</p>
+        <p class="n" id="theirs">£624</p>
+      </div>
+    </div>
+    <p class="fine">An example only. A month here is 52 weeks ÷ 12. Payment processing for owners' cards is covered by YUKIND.</p>
+  </section>
+
+  <section class="perks pad" aria-labelledby="perks-h">
+    <h2 class="display d2" id="perks-h">Why sit with us</h2>
+    <ol>
+      <li><h3 class="display d3">Your price</h3><p>Set a price for each kind of care. It's yours in full.</p></li>
+      <li><h3 class="display d3">Your time</h3><p>Answer each request with "I'm free" or "not this time". No pressure, no penalties.</p></li>
+      <li><h3 class="display d3">Standby</h3><p>Turn on Standby to pick up urgent bookings when another sitter cancels. Already paid, ready to go.</p></li>
+      <li><h3 class="display d3">Paid properly</h3><p>Your pay goes to your bank through Stripe after each booking. No chasing anyone.</p></li>
+    </ol>
+  </section>
+
+  <section class="steps" id="how">
+    <div class="pad">
+      <h2 class="display d2">What you'll need</h2>
+      <ul>
+        <li><h3 class="caps">Photo ID</h3><p>A passport or driving licence. Checked in the app with a selfie, in about two minutes.</p></li>
+        <li><h3 class="caps">A DBS certificate</h3><p>A basic DBS check. You can apply online on GOV.UK and upload it to the app.</p></li>
+        <li><h3 class="caps">Real experience with dogs</h3><p>Your own, family dogs, work or volunteering. Tell us about it.</p></li>
+        <li><h3 class="caps">London</h3><p>Choose the boroughs you're happy to cover.</p></li>
+      </ul>
+    </div>
+    <div class="pad">
+      <h2 class="display d2">How it works</h2>
+      <ol>
+        <li><div><h3 class="caps">Apply in the app</h3><p>Your profile, services, prices and three quick questions about real situations.</p></div></li>
+        <li><div><h3 class="caps">Check your ID and DBS</h3><p>Every certificate is read by a person at YUKIND.</p></div></li>
+        <li><div><h3 class="caps">Get approved</h3><p>We'll tell you as soon as your profile is live.</p></div></li>
+        <li><div><h3 class="caps">Say yes to dogs you love</h3><p>Requests arrive in the app. Walk, share snaps, mark care as done, get paid.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="faq pad" aria-labelledby="faq-h">
+    <h2 class="display d2" id="faq-h">Questions</h2>
+    <details><summary class="caps">Does it cost anything to join?</summary><p>No. YUKIND is free for sitters. Owners pay a booking fee on top of your price.</p></details>
+    <details><summary class="caps">When do I get paid?</summary><p>When you mark the care as done, your pay is sent to your bank account through Stripe.</p></details>
+    <details><summary class="caps">What if an owner cancels late?</summary><p>Owners get a refund only if they cancel 48 hours or more before. After that, you're protected.</p></details>
+    <details><summary class="caps">What if I have to cancel?</summary><p>Life happens. Cancel in the app and we ask trusted backup sitters straight away, so the dog is looked after.</p></details>
+    <details><summary class="caps">I have a dog too. Can I book sitters?</summary><p>Yes. One account works for both. Switch between sitter and owner in your account.</p></details>
+  </section>
+
+  <section class="join pad" id="apply">
+    <h2 class="display d2">Apply to sit</h2>
+    <p class="caps" style="margin-top:22px">We'll email you the moment the app opens</p>
+    <form id="waitlist" novalidate>
+      <div class="field"><label class="caps" for="wl-name">First name</label><input type="text" id="wl-name" name="name" autocomplete="given-name" maxlength="60"></div>
+      <div class="field"><label class="caps" for="wl-email">Email</label><input type="email" id="wl-email" name="email" autocomplete="email" maxlength="160"></div>
+      <div class="field"><label class="caps" for="wl-area">Main borough</label><select id="wl-area" name="area"><option value="">Choose your borough</option></select></div>
+      <button class="btn" type="submit">Register interest</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+      <p class="fine">See our <a href="privacy.html">privacy policy</a>.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="pad">
+  <a class="logo" href="/">YUKIND</a>
+  <nav class="caps" aria-label="Footer">
+    <a href="/">For owners</a><a href="sitters.html">For sitters</a>
+    <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:hello@yukind.uk">hello@yukind.uk</a>
+  </nav>
+  <p class="fine">© 2026 YUKIND, London</p>
+</footer>
+
+<script>
+// earnings
+const price = document.getElementById('price'), walks = document.getElementById('walks');
+const gbp = n => '£' + Math.round(n).toLocaleString('en-GB');
+function calc() {
+  document.getElementById('price-out').textContent = '£' + price.value;
+  document.getElementById('walks-out').textContent = walks.value;
+  const month = price.value * walks.value * 52 / 12;
+  document.getElementById('ours').textContent = gbp(month);
+  document.getElementById('theirs').textContent = gbp(month * 0.8);
+}
+price.addEventListener('input', calc); walks.addEventListener('input', calc); calc();
+
+// register interest (same list as the main waitlist, as a sitter)
+const SUPABASE_URL = 'https://rbuiafqvlfgmhdrhudhy.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_RpSMFQiXCIgI8nuxFgP2_A_EUZNFQmZ'; // public key, safe here
+const boroughs = ['Barking & Dagenham','Barnet','Bexley','Brent','Bromley','Camden','City of London','Croydon','Ealing','Enfield','Greenwich','Hackney','Hammersmith & Fulham','Haringey','Harrow','Havering','Hillingdon','Hounslow','Islington','Kensington & Chelsea','Kingston','Lambeth','Lewisham','Merton','Newham','Redbridge','Richmond','Southwark','Sutton','Tower Hamlets','Waltham Forest','Wandsworth','Westminster','Outside London'];
+const form = document.getElementById('waitlist');
+const sel = form.area;
+boroughs.forEach(b => sel.add(new Option(b, b)));
+const msg = form.querySelector('.form-msg');
+const say = (t, ok) => { msg.textContent = t; msg.className = 'form-msg ' + (ok ? 'ok' : 'err'); };
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = form.name.value.trim(), email = form.email.value.trim(), area = sel.value;
+  if (!name) { say('Add your first name.'); form.name.focus(); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('Check your email address.'); form.email.focus(); return; }
+  if (!area) { say('Choose your borough.'); sel.focus(); return; }
+  const btn = form.querySelector('button');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    const res = await fetch(SUPABASE_URL + '/rest/v1/waitlist', {
+      method: 'POST',
+      headers: { apikey: SUPABASE_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+      body: JSON.stringify({ name, email: email.toLowerCase(), area, role: 'sitter' }),
+    });
+    if (!(res.ok || res.status === 409)) throw new Error(res.status);
+    form.reset();
+    say(`Thank you, ${name}. We'll email you the moment you can apply in the app.`, true);
+  } catch (err) {
+    say("That didn't go through. Try again, or write to hello@yukind.uk.");
+  } finally {
+    btn.disabled = false; btn.textContent = 'Register interest';
+  }
+});
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YUKIND · Dog care, London</title>
-<meta name="description" content="Checked dog sitters across London for walks, day sitting, overnight stays and special care. Opening November 2026.">
+<meta name="description" content="Checked dog sitters across London for walks, day sitting, overnight stays and special care. Opening soon.">
 <meta property="og:title" content="YUKIND · Dog care, London">
 <meta property="og:description" content="Checked dog sitters across London. Join the waitlist.">
 <meta property="og:image" content="https://yukind.uk/img/hero1.jpg">
@@ -94,6 +94,24 @@ header.solid{background:var(--white);color:var(--wine);border-bottom:1px solid v
 @keyframes drift{to{transform:translateX(calc(-50% - 7px))}}
 @media (prefers-reduced-motion:reduce){.track{animation:none}.marquee{overflow-x:auto}}
 @media (max-width:760px){.lookgrid{grid-template-columns:1fr 1fr;grid-auto-rows:44vw}.look{padding-top:96px;padding-bottom:80px}}
+
+
+/* only at YUKIND: three things that happen while you're away */
+.only{background:var(--blush);padding-top:140px;padding-bottom:140px;text-align:center}
+.only .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1240px;margin:72px auto 0;text-align:center}
+.only .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#FBEFF2}
+.only .ph img{width:100%;height:100%;object-fit:cover}
+.only h3{margin:26px 0 10px}
+.only .feat p{font-size:14px;max-width:32ch;margin:0 auto}
+.chip{position:absolute;left:16px;bottom:16px;background:var(--white);color:var(--wine);padding:9px 14px;display:flex;gap:9px;align-items:center}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--rose);display:block}
+.route svg{width:100%;height:100%;display:block}
+.route .trail{stroke-dasharray:1400;stroke-dashoffset:1400;transition:stroke-dashoffset 3.2s cubic-bezier(.4,.1,.2,1)}
+.route.in .trail{stroke-dashoffset:0}
+.route .ping{transform-origin:center;transform-box:fill-box;animation:ping 2.2s ease-out infinite}
+@keyframes ping{from{opacity:.55;transform:scale(1)}to{opacity:0;transform:scale(3.2)}}
+@media (prefers-reduced-motion:reduce){.route .trail{transition:none;stroke-dashoffset:0}.route .ping{animation:none}}
+@media (max-width:900px){.only .feat{grid-template-columns:1fr;max-width:460px;row-gap:64px}.only{padding-top:96px;padding-bottom:96px}}
 
 /* the two houses: owners and sitters */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--white)}
@@ -189,7 +207,7 @@ footer .fine{color:rgba(244,198,211,.7)}
 <header id="hdr">
   <div class="bar pad">
     <nav class="caps" aria-label="Main">
-      <a href="#owners">Owners</a><a href="#sitters">Sitters</a><a href="#standards">Standards</a>
+      <a href="#features">Features</a><a href="#owners">Owners</a><a href="sitters.html">Sitters</a>
     </nav>
     <a class="logo" href="#top" aria-label="YUKIND home">YUKIND</a>
     <div class="right caps"><a href="#join">Waitlist</a></div>
@@ -205,7 +223,7 @@ footer .fine{color:rgba(244,198,211,.7)}
       <img src="img/hero-sea.jpg" alt="A white dog sitting on a pebble beach by the sea">
     </div>
     <div class="hero-copy pad">
-      <p class="caps">London · Opening November 2026</p>
+      <p class="caps">London · Opening soon</p>
       <h1 class="display d1">Kind care<br>for happy dogs</h1>
       <div class="hero-links caps">
         <a class="link" href="#owners">For owners</a>
@@ -230,6 +248,42 @@ footer .fine{color:rgba(244,198,211,.7)}
     <div class="marquee" aria-hidden="true"><div class="track"><img src="img/lb-bed.jpg" alt="" loading="lazy"><img src="img/lb-window.jpg" alt="" loading="lazy"><img src="img/lb-forest.jpg" alt="" loading="lazy"><img src="img/lb-duo.jpg" alt="" loading="lazy"><img src="img/lb-face.jpg" alt="" loading="lazy"><img src="img/lb-park.jpg" alt="" loading="lazy"><img src="img/lb-snow.jpg" alt="" loading="lazy"><img src="img/lb-burgundy.jpg" alt="" loading="lazy"><img src="img/lb-carpet.jpg" alt="" loading="lazy"><img src="img/lb-sun2.jpg" alt="" loading="lazy"><img src="img/lb-yellow.jpg" alt="" loading="lazy"><img src="img/lb-leaves2.jpg" alt="" loading="lazy"><img src="img/lb-balcony.jpg" alt="" loading="lazy"><img src="img/lb-lick.jpg" alt="" loading="lazy"><img src="img/lb-happy.jpg" alt="" loading="lazy"><img src="img/lb-sunside.jpg" alt="" loading="lazy"><img src="img/lb-bandana.jpg" alt="" loading="lazy"><img src="img/lb-down.jpg" alt="" loading="lazy"><img src="img/lb-tongue.jpg" alt="" loading="lazy"><img src="img/lb-window2.jpg" alt="" loading="lazy"><img src="img/lb-bus2.jpg" alt="" loading="lazy"><img src="img/lb-bed.jpg" alt="" loading="lazy"><img src="img/lb-window.jpg" alt="" loading="lazy"><img src="img/lb-forest.jpg" alt="" loading="lazy"><img src="img/lb-duo.jpg" alt="" loading="lazy"><img src="img/lb-face.jpg" alt="" loading="lazy"><img src="img/lb-park.jpg" alt="" loading="lazy"><img src="img/lb-snow.jpg" alt="" loading="lazy"><img src="img/lb-burgundy.jpg" alt="" loading="lazy"><img src="img/lb-carpet.jpg" alt="" loading="lazy"><img src="img/lb-sun2.jpg" alt="" loading="lazy"><img src="img/lb-yellow.jpg" alt="" loading="lazy"><img src="img/lb-leaves2.jpg" alt="" loading="lazy"><img src="img/lb-balcony.jpg" alt="" loading="lazy"><img src="img/lb-lick.jpg" alt="" loading="lazy"><img src="img/lb-happy.jpg" alt="" loading="lazy"><img src="img/lb-sunside.jpg" alt="" loading="lazy"><img src="img/lb-bandana.jpg" alt="" loading="lazy"><img src="img/lb-down.jpg" alt="" loading="lazy"><img src="img/lb-tongue.jpg" alt="" loading="lazy"><img src="img/lb-window2.jpg" alt="" loading="lazy"><img src="img/lb-bus2.jpg" alt="" loading="lazy"></div></div>
   </section>
 
+
+  <section class="only pad" id="features" aria-labelledby="only-h">
+    <p class="caps">Only at YUKIND</p>
+    <h2 class="display d2" id="only-h" style="margin-top:18px">While you're away</h2>
+    <div class="feat">
+      <article>
+        <div class="ph route" id="route">
+          <svg viewBox="0 0 400 500" role="img" aria-label="A walk route drawn in pink on a map">
+            <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#E2507F" stroke-opacity=".09"/></pattern></defs>
+            <rect width="400" height="500" fill="#FBEFF2"/><rect width="400" height="500" fill="url(#grid)"/>
+            <path d="M-10 140 C 120 120, 260 170, 410 130" fill="none" stroke="#fff" stroke-width="16"/>
+            <path d="M120 -10 C 140 160, 90 330, 150 510" fill="none" stroke="#fff" stroke-width="12"/>
+            <ellipse cx="275" cy="320" rx="95" ry="70" fill="#E9F0E2"/>
+            <path class="trail" d="M88 402 C 100 340, 128 300, 150 262 S 176 190, 232 186 S 330 214, 346 270 S 330 372, 268 392 S 186 380, 168 330 S 196 276, 236 288" fill="none" stroke="#E2507F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="88" cy="402" r="8" fill="#fff" stroke="#4A0E22" stroke-width="4"/>
+            <circle class="ping" cx="236" cy="288" r="10" fill="#E2507F"/>
+            <circle cx="236" cy="288" r="10" fill="#E2507F" stroke="#fff" stroke-width="4"/>
+          </svg>
+          <span class="chip caps"><i></i>Live · 0.78 mi · 32 min</span>
+        </div>
+        <h3 class="display d3">Live walks</h3>
+        <p>Follow every walk on a map as it happens. The route is saved in pink, with miles, time and photos from the way.</p>
+      </article>
+      <article>
+        <div class="ph"><img src="img/street.jpg" alt="A small white dog in a yellow bandana looking up at the camera" loading="lazy"><span class="chip caps"><i></i>Sent in 42 sec</span></div>
+        <h3 class="display d3">Instant snaps</h3>
+        <p>Missing them? Ask for a photo or a video and it arrives on your phone in moments.</p>
+      </article>
+      <article>
+        <div class="ph"><img src="img/sofa.jpg" alt="A small white dog asleep on a green velvet sofa" loading="lazy"><span class="chip caps"><i></i>Backup sitter found</span></div>
+        <h3 class="display d3">A backup, always</h3>
+        <p>If a sitter has to cancel, trusted backup sitters are asked at once, at no extra cost. Or you're refunded in full.</p>
+      </article>
+    </div>
+  </section>
+
   <section class="duo" id="owners">
     <a href="#join" data-role="owner">
       <div class="ph"><img src="img/owners.jpg" alt="Two dogs in knitted jumpers sitting on a park path" loading="lazy"></div>
@@ -239,12 +293,12 @@ footer .fine{color:rgba(244,198,211,.7)}
         <span class="link caps">Join as an owner</span>
       </div>
     </a>
-    <a href="#join" data-role="sitter">
+    <a href="sitters.html">
       <div class="ph"><img src="img/sitters.jpg" alt="Two dogs sitting in autumn leaves" loading="lazy"></div>
       <div class="cap pad">
         <h3 class="display d3">For sitters</h3>
         <p>Set your own price and keep all of it. Choose your requests and your boroughs.</p>
-        <span class="link caps">Apply as a sitter</span>
+        <span class="link caps">Become a sitter</span>
       </div>
     </a>
   </section>
@@ -289,18 +343,20 @@ footer .fine{color:rgba(244,198,211,.7)}
     <p class="caps">of your price is yours</p>
     <div class="perks">
       <div><h3 class="display d3">Your price</h3><p>You set it. Owners pay our booking fee.</p></div>
-      <div><h3 class="display d3">Your time</h3><p>Reply "I'm free" or "not this time" to each request.</p></div>
+      <div><h3 class="display d3">Your time</h3><p>Reply "I'm free" or "not this time". Turn on Standby for urgent, already-paid bookings.</p></div>
       <div><h3 class="display d3">Your pay</h3><p>Sent to your bank through Stripe after each booking.</p></div>
     </div>
-    <a class="link caps" href="#join" data-role="sitter">Apply to sit with YUKIND</a>
+    <a class="link caps" href="sitters.html">How sitting with YUKIND works</a>
   </section>
 
   <section class="faq pad">
     <h2 class="display d2">Questions</h2>
-    <details><summary class="caps">When will YUKIND open?</summary><p>November 2026, across London, on iPhone. Join the waitlist and we'll write on the day.</p></details>
+    <details><summary class="caps">When will YUKIND open?</summary><p>Very soon, across London, on iPhone. Join the waitlist and we'll write on the day.</p></details>
     <details><summary class="caps">How much does it cost?</summary><p>Each sitter sets their own price. A booking fee is added for owners, and you see the total before paying.</p></details>
     <details><summary class="caps">When am I charged?</summary><p>Only when you confirm a sitter. Requests and chat are free.</p></details>
-    <details><summary class="caps">What if I need to cancel?</summary><p>Cancel 48 hours or more before the booking for a full refund. If a sitter cancels, you're always refunded in full.</p></details>
+    <details><summary class="caps">What if I need to cancel?</summary><p>Cancel 48 hours or more before the booking for a full refund.</p></details>
+    <details><summary class="caps">What if my sitter cancels?</summary><p>We ask trusted backup sitters straight away. You choose one at no extra cost, or take a full refund. If no one can help in time, you're refunded automatically.</p></details>
+    <details><summary class="caps">Can I see where my dog is?</summary><p>Yes. When the walk starts you can follow it live on a map, and every route is saved afterwards. You can also ask for a photo or video at any time.</p></details>
     <details><summary class="caps">Can a sitter care for a dog with medical needs?</summary><p>Yes. Only sitters with experience of medication, older dogs or recovery are shown for these dogs.</p></details>
   </section>
 
@@ -326,7 +382,7 @@ footer .fine{color:rgba(244,198,211,.7)}
 <footer class="pad">
   <a class="logo" href="#top">YUKIND</a>
   <nav class="caps" aria-label="Footer">
-    <a href="#owners">Owners</a><a href="#sitters">Sitters</a><a href="#standards">Standards</a>
+    <a href="#features">Features</a><a href="#owners">Owners</a><a href="sitters.html">Sitters</a><a href="#standards">Standards</a>
     <a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="mailto:hello@yukind.uk">hello@yukind.uk</a>
   </nav>
   <p class="fine">© 2026 YUKIND, London</p>
@@ -349,6 +405,14 @@ if (!still) setInterval(() => {
   i = (i + 1) % slides.length;
   slides[i].classList.add('on'); dots[i] && dots[i].classList.add('on');
 }, 4500);
+
+// draw the walk route when it comes into view
+const route = document.getElementById('route');
+if (route) {
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { route.classList.add('in'); o.disconnect(); } }), { threshold: .4 }).observe(route);
+  } else route.classList.add('in');
+}
 
 // waitlist
 const SUPABASE_URL = 'https://rbuiafqvlfgmhdrhudhy.supabase.co';
